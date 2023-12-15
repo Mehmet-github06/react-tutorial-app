@@ -1,8 +1,12 @@
-import { FaEdit } from "react-icons/fa";
-import { AiFillDelete } from "react-icons/ai";
-import axios from "axios";
-const TutorialList = ({ tutorials }) => {
-  //+ mock data
+import { FaEdit } from "react-icons/fa"
+import { AiFillDelete } from "react-icons/ai"
+import axios from "axios"
+import EditTutorial from "./EditTutorial"
+import { useState } from "react"
+
+const TutorialList = ({ tutorials, getTutorials }) => {
+  const [editData, setEditData] = useState("")
+  //? mock data
   // const tutorials = [
   //   {
   //     id: 1,
@@ -14,12 +18,23 @@ const TutorialList = ({ tutorials }) => {
   //     title: "React",
   //     description: "JS library for UI design",
   //   },
+  //   {
+  //     id: 3,
+  //     title: "Solid.JS",
+  //     description: "JS library for UI design",
+  //   },
   // ]
 
   const deleteTutorial = async (id) => {
-   await axios.delete(`${process.env.REACT_APP_URL}${id}`)
-   
-  };
+    try {
+      await axios.delete(`${process.env.REACT_APP_URL}${id}/`)
+    } catch (error) {
+      console.log(error)
+    }
+    getTutorials()
+  }
+
+  console.log(editData)
 
   return (
     <div className="container mt-4">
@@ -35,7 +50,8 @@ const TutorialList = ({ tutorials }) => {
           </tr>
         </thead>
         <tbody>
-          {tutorials?.map(({ id, title, description }) => {
+          {tutorials?.map((item) => {
+            const { id, title, description } = item
             return (
               <tr key={id}>
                 <th>{id}</th>
@@ -46,6 +62,9 @@ const TutorialList = ({ tutorials }) => {
                     size={20}
                     type="button"
                     className="me-2 text-warning"
+                    data-bs-toggle="modal"
+                    data-bs-target="#open-modal"
+                    onClick={() => setEditData(item)}
                   />
                   <AiFillDelete
                     size={22}
@@ -55,12 +74,13 @@ const TutorialList = ({ tutorials }) => {
                   />
                 </td>
               </tr>
-            );
+            )
           })}
         </tbody>
       </table>
+      <EditTutorial editData={editData} />
     </div>
-  );
-};
+  )
+}
 
-export default TutorialList;
+export default TutorialList
