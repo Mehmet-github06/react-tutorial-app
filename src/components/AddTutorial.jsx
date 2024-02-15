@@ -7,7 +7,7 @@ const AddTutorial = ({ getTutorials }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const newTutorial = { title, description }
+    const newTutorial = { title:title, description:description}
     postTutorial(newTutorial)
     setTitle("")
     setDescription("")

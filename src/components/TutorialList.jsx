@@ -34,7 +34,7 @@ const TutorialList = ({ tutorials, getTutorials }) => {
     getTutorials()
   }
 
-  console.log(editData)
+  console.log(editData) 
 
   return (
     <div className="container mt-4">
