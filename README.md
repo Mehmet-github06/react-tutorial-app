@@ -13,27 +13,45 @@
   </p>
 </div>
 
-<img src="./public/img/Animation.gif" >
+<img src="./public/Animation.gif" >
 
 ## Description
 
-This project is a web-based appointment system for Anatolian Hospital. It allows users to view doctors, schedule appointments, and manage appointment lists. The application is built using React and Bootstrap, showcasing a responsive and user-friendly interface.
+
+In this project created with React, I have implemented data insertion, data update, and data deletion operations on the API used
 
 ## Features
 
--   **Doctor Profiles:** Displays a list of doctors with their specializations and available slots.
--   **Appointment Scheduling:** Users can schedule appointments with doctors.
--   **Appointment Management:** Users can view, add, and delete appointments.
+Data is retrieved from the API using the GET operation.
+Data is added to the API by performing a POST operation.
+Data can be deleted from the API by executing a DELETE operation.
+The data in the API can be modified by using the PUT operation.
 
 ## Screenshots
-<img src="./public/img/Screenshot_2.jpg" alt="modalImg" width="45%" height="300px">
-<img src="./public/img/Screenshot_3.jpg" alt="modalImg" width="45%" height="300px">
-<img src="./public/img/Screenshot_4.jpg" alt="modalImg" width="90%" height="500px">
+<img src="./public/Screenshot_1.jpg" alt="modalImg" width="100%" height="300px">
 
 
-## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+## Project Skeleton
+Tutorial App(folder)
+|
+|----readme.md         
+SOLUTION
+├── public
+│     └── index.html
+├── src
+│    ├── assets
+│    │       └── [images]
+│    ├── components
+│    │       ├── AddTutorial.jsx
+│    │       ├── EditTutorial.jsx  
+│    │       └── TutorialList.jsx 
+│    ├── pages
+│    │       └── Home.jsx        
+│    ├── App.js
+│    └── index.js
+├── package.json
+└── yarn.lock
 
 ### Prerequisites
 
@@ -63,8 +81,8 @@ A step by step series of examples that tell you how to get a development environ
 
 ## Responsive Looks
 
-<img src="./public/img/Screenshot_13.jpg" alt="modalImg" width="30%">
-<img src="./public/img/Screenshot_1.jpg" alt="modalImg" width="65%" >
+<img src="./public/Screenshot_2.jpg" alt="modalImg" width="30%">
+<img src="./public/Screenshot_3.jpg" alt="modalImg" width="65%" >
 
 ## Contact
 
