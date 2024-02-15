@@ -8,7 +8,7 @@
 
   <h3 align="center">Tutorial App</h3>
   <p align="center">
-    <a href="https://react-appointment-doctor-app.netlify.app/"><strong> 👩‍⚕️ LIVE 👨‍⚕️ »</strong></a>
+    <a href="https://react-tutorial-app-iota.vercel.app/"><strong> 👩‍⚕️ LIVE 👨‍⚕️ »</strong></a>
     <br />
   </p>
 </div>
